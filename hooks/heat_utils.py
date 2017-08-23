@@ -52,6 +52,7 @@ from heat_context import (
     InstanceUserContext,
     HeatApacheSSLContext,
     HeatHAProxyContext,
+    HeatLoggingContext,
 )
 
 TEMPLATES = 'templates/'
@@ -140,7 +141,7 @@ CONFIG_FILES = OrderedDict([
         'services': ['memcached'],
     }),
     (HEAT_LOGGER_CONF, {
-        'contexts': [heat_context.HeatLoggingContext()],
+        'contexts': [HeatLoggingContext()],
         'services': BASE_SERVICES,
     })
 ])
