@@ -88,6 +88,7 @@ CLUSTER_RES = 'grp_heat_vips'
 SVC = 'heat'
 HEAT_DIR = '/etc/heat'
 HEAT_CONF = '/etc/heat/heat.conf'
+HEAT_LOGGER_CONF = '/etc/heat/logging.conf'
 HEAT_API_PASTE = '/etc/heat/api-paste.ini'
 HAPROXY_CONF = '/etc/haproxy/haproxy.cfg'
 HTTPS_APACHE_CONF = '/etc/apache2/sites-available/openstack_https_frontend'
@@ -141,6 +142,10 @@ CONFIG_FILES = OrderedDict([
         'hook_contexts': [context.MemcacheContext()],
         'services': ['memcached'],
     }),
+    (HEAT_LOGGER_CONF, {
+        'contexts': [heat_context.HeatLoggingContext()],
+        'services': BASE_SERVICES,
+    })
 ])
 
 
