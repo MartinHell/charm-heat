@@ -7,6 +7,11 @@ options:
     default: False
     type: boolean
     description: Enable verbose logging.
+  json-logs:
+    type: boolean
+    default: False
+    description: |
+      Setting this to True will configure logformat to json.
   openstack-origin:
     default: distro
     type: string
