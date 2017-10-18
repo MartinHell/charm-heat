@@ -15,7 +15,7 @@
 import os
 
 from charmhelpers.contrib.openstack import context
-from charmhelpers.core.hookenv import config, leader_get
+from charmhelpers.core.hookenv import config, leader_get, log
 from charmhelpers.core.host import pwgen
 from charmhelpers.contrib.hahelpers.cluster import (
     determine_apache_port,
