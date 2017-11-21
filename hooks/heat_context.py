@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from charmhelpers.contrib.openstack import context
-from charmhelpers.core.hookenv import config, leader_get
+from charmhelpers.core.hookenv import config, leader_get, log
 from charmhelpers.contrib.hahelpers.cluster import (
     determine_apache_port,
     determine_api_port,
